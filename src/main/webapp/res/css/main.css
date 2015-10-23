@@ -1,0 +1,205 @@
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    padding: 0;
+    outline: none;
+    font-family: "Microsoft YaHei";
+}
+
+del, ins, u, s, a, a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* start */
+
+.nav-black {
+    background-color: #242424;
+}
+
+.nav .navbar-item {
+    float: left;
+  margin-left: 90px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+}
+
+.nav .navbar-item a {
+  color: #666;
+}
+
+.nav .navbar-item li a .more {
+  line-height: 60px;
+}
+
+
+.nav .navbar-item .hl a, .nav .navbar-item a:hover  {
+  color: #fff;
+}
+
+.navbar-item ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.navbar-item li:first-child {
+    margin-left: 0;
+}
+.navbar-item li:last-child {
+    position: relative;
+}
+
+.menu {
+    border-bottom: 1px solid #e6e6e6;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+.menu .menu-highlight a, .menu li:hover a {
+    color: #00c800;
+}
+
+.menu a {
+    color: #333;
+    display: block;
+}
+
+.menu li {
+    list-style-type: none;
+    float: left;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+footer {
+    clear: both;
+    color: #aaa;
+    margin-bottom: 5px;
+    padding: 1px 5px 5px 5px;
+    text-align: center;
+}
+
+footer hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+footer a {
+    margin-right: 10px;
+    color: #6c6c6c;
+}
+
+footer a:hover {
+    color: #00c800;
+}
+
+p.head-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 9px;
+    margin:0px;
+}
+
+ul.home-stl {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    height: 200px;
+}
+
+ul li.font-13-gray {
+    font-size: 14px;
+    color: gray;
+}
+
+table div, .table {
+	font-size: 14px !important;
+}
+
+table .arrow {
+    margin-top: 60px;
+}
+
+.table.introduce {
+    margin-top: 40px;
+}
+
+.table.introduce td {
+    border-top: 0px solid white;
+}
+
+.bs-checkbox {
+	vertical-align: middle !important;
+}
+
+.warning-block {
+	font-size: 12px;	
+	margin: 0;
+}
+
+button.close {
+	font-size: 50px;
+	line-height: 30px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.btn {
+	margin-left: 10px;
+}
+
+.btn:first-of-type {
+	margin-left: 0;
+}
+
+.modal .btn.btn-cancel {
+	margin-left: 10px;
+}
+
+.btn-cancel {
+    background-color: #B0B0B0;
+    color: #ffffff;
+    }
+    
+.btn-cancel:hover{
+	color:#ffffff;
+	background-color: #868686;
+}
+
+table.table-fixed {
+	table-layout: fixed;
+}
+
+.text-hidden {
+	text-overflow:ellipsis !important;
+	white-space:nowrap !important;
+	overflow-x:hidden !important;
+}
+
+.text-auto-hidden {
+	text-overflow:ellipsis !important;
+	white-space:nowrap !important;
+	overflow-x:hidden !important;
+}
+
+.text-auto-hidden:hover {
+	text-overflow:inherit !important;
+	overflow-x:visible !important;
+}
+
+.modal-text {
+    font-size: 20px;
+}
+
+div thead th{
+	   background-color: #E8E8E8;
+	}

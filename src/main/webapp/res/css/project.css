@@ -1,0 +1,32 @@
+.overview {
+    margin: 40px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.overview .component {
+    padding: 10px 0px 30px 0px;
+}
+
+.overview .overview-header {
+    padding-bottom: 10px;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.overview .title {
+    font-size: 15pt;
+}
+
+.overview .overview-body  {
+    margin: 15px;
+}
+
+.project-table {
+    margin-top: 40px;
+}
+
+.edit {
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}

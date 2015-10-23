@@ -1,0 +1,15 @@
+/target
+/.settings
+.settings
+.classpath
+.project
+.idea
+/logs
+/bin
+/target
+target
+test-output
+
+*.swp
+*.class
+*.iml
