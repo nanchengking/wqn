@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liushuqing.wqn.meta.dao.UserDao">
+	<sql id="allColumn">
+		id as id,
+		pass_word as passWord,
+		name as name,
+		created_at as
+		createTime,
+		updated_at as changeTime,
+		leval as leval,
+		description as
+		description
+	</sql>
+
+	<insert id="insertUser" parameterType="com.liushuqing.wqn.meta.entity.User"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into
+		user(passWord,name,createTime,changeTime,leval,description)
+		values(#{passWord},#{name},#{createTime},#{changeTime},#{leval},#{description})
+	</insert>
+
+<!-- 	<insert id="insertUsers" parameterType="java.util.List">
+		insert into
+		user(passWord,name,createTime,changeTime,leval,description)
+		values
+		<foreach item="item" index="index" collection="list" open="("
+			separator="," close=")">
+			#{item.passWord},#{item.name},#{item.createTime},#{item.changeTime},#{item.leval},#{item.description}
+		</foreach>
+	</insert> -->
+
+	<delete id="deleteUser" parameterType="java.lang.Integer">
+		delete from user where
+		id=#{prama1}
+	</delete>
+
+	<delete id="deleteUsers" parameterType="java.util.List">
+		delete from user where id in
+		<foreach item="item" index="index" collection="list" open="("
+			separator="," close=")">
+			#{prama1}
+		</foreach>
+	</delete>
+
+	<update id="updateUser" parameterType="com.liushuqing.wqn.meta.entity.User">
+		update user set
+		passWord=#{passWord},name=#{name},createTime=#{createTime},changeTime=#{changeTime},leval=#{leval},description=#{description}
+		where
+		id=#{id}
+	</update>
+
+
+
+</mapper>

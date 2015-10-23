@@ -56,7 +56,7 @@
 
 	<!-- Dao接口所在包名，Spring会自动查找其下的Dao! -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.liushuqing.wqn.dao" />
+		<property name="basePackage" value="com.liushuqing.wqn.meta.dao" />
 		<!-- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property> -->
 	</bean> 
 
