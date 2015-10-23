@@ -32,8 +32,16 @@ public class UserController extends BaseController {
         model.addAttribute("test", "this is a test!");
         System.out.println(request);
         logger.debug("===login===");
-        ModelAndView mv = new ModelAndView("ftl/index");
-        return mv;// /template/html/ftl/index.html
+        ModelAndView mv = new ModelAndView("login");
+        return mv;
     }
+    
+    @RequestMapping("/html")
+    public String relogin(HttpServletRequest request, Model model, HttpSession session) {
+        model.addAttribute("test", "this is a test!");
+        logger.debug("===relogin===");
+        return "reLogin";
+    }
+    
 
 }

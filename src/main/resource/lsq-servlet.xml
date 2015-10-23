@@ -33,7 +33,7 @@
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<!-- 配置模板加载路径 -->
 		<property name="templateLoaderPath">
-			<value>/WEB-INF/template/ftl</value>
+			<value>/template/ftl/</value>
 		</property>
 		<property name="freemarkerSettings">
 			<props>
@@ -86,13 +86,13 @@
 					<property name="exposeRequestAttributes" value="true" />
 					<property name="exposeSessionAttributes" value="true" />
 					<property name="contentType" value="text/html;charset=UTF-8" />
-					<property name="order" value="1"></property>
+					<property name="order" value="0"></property>
 				</bean>
 				<bean
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-					<property name="prefix" value="" />
+					<property name="prefix" value="/template/html/" />
 					<property name="suffix" value=".html"></property>
-					<property name="order" value="2"></property>
+					<property name="order" value="20"></property>
 				</bean>
 			</list>
 		</property>
@@ -106,13 +106,13 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="jsonConverter"
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
 		<property name="prefixJson" value="false" />
 		<property name="supportedMediaTypes" value="application/json" />
 	</bean>
-	
+
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
@@ -121,5 +121,5 @@
 			</list>
 		</property>
 	</bean>
-	
+
 </beans>
