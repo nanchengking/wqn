@@ -14,41 +14,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<!-- 配置环境 -->
-	<profiles>
-		<!-- 开发环境配置 -->
-		<profile>
-			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources/dev</directory>
-					</resource>
-					<resource>
-						<directory>src/main/resources/</directory>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-		<!-- 测试环境配置 -->
-		<profile>
-			<id>test</id>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources/test</directory>
-					</resource>
-					<resource>
-						<directory>src/main/resources/</directory>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-	</profiles>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -83,7 +48,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.0.2.RELEASE</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
@@ -99,23 +64,17 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.2</version>
 		</dependency>
-
+ -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.2.4</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>commons-logging</artifactId>
-					<groupId>commons-logging</groupId>
-				</exclusion>
-			</exclusions>
+			<version>4.3.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>4.2.4</version>
+			<version>4.3.3</version>
 		</dependency>
 
 		<dependency>
@@ -218,17 +177,23 @@
 
 		<!--爬虫有关开始 -->
 		<dependency>
+			<groupId>edu.uci.ics</groupId>
+			<artifactId>crawler4j</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<dependency>
+		
+			<groupId>us.codecraft</groupId>
+			<artifactId>webmagic-core</artifactId>
+			<version>0.5.2</version>
+		</dependency>
+		
+		<dependency>
 			<groupId>us.codecraft</groupId>
 			<artifactId>webmagic-extension</artifactId>
 			<version>0.5.2</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-
+		
 		<!--爬虫有关结束 -->
 
 	</dependencies>

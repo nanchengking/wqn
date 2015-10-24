@@ -20,14 +20,14 @@ import us.codecraft.webmagic.Spider;
 @Controller
 @RequestMapping(value = "spider")
 public class SpiderController extends BaseController {
-    
+
     private static Logger logger = LoggerFactory.getLogger(SpiderController.class);
 
     @RequestMapping(value = "/crawl")
-    public @ResponseBody String crawl() {
-        Spider.create(new GithubRepoPageProcessor()).addUrl("https://github.com/code4craft").thread(5).run();
-        logger.debug("发出爬取请求");
-        return "";
+    public void crawl() {
+        logger.debug("\n  发出爬取请求");
+        Spider.create(new GithubRepoPageProcessor()).addUrl("http://www.baidu.com").thread(5).run();
+        logger.debug("\n  爬虫运行结束");
     }
 
 }
