@@ -16,6 +16,7 @@ function crawlSpider(){
         success : function(data) {
             if(data.code==200){
                 console.log("已经发出爬取请求！");
+                console.log(data.msg);
             }else{
                 alert(data.msg);
             }

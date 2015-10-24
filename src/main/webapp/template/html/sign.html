@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" media="all" href="/res/css/bootstrap.css">
+<link rel="stylesheet" media="all" href="/res/css/main.css">
+<script src="/res/js/jquery-1.11.3.min.js"></script>
+<script src="/res/js/bootstrap.js"></script>
+<script src="/res/js/main.js"></script>
+
+<link rel="stylesheet" media="all"
+	href="/res/css/plugin/bootstrap-table.css">
+<script src="/res/js/plugin/bootstrap-table.js"></script>
+<script src="/res/js/plugin/locale/bootstrap-table-zh-CN.js"></script>
+
+<link rel="stylesheet" media="all" href="/res/css/plugin/select2.css">
+<script src="/res/js/plugin/select2.js"></script>
+
+<link rel="stylesheet" media="all"
+	href="/res/css/plugin/bootstrap-datetimepicker.min.css">
+<script src="/res/js/plugin/moment.min.js"></script>
+<script src="/res/js/plugin/bootstrap-datetimepicker.min.js"></script>
+
+<meta charset="UTF-8">
+<title>这个网页引入了很多boostrap</title>
+
+</head>
+<body background="/res/img/girl02.jpg">
+		<div class="row operate-panel">
+			<div class="col-sm-12">
+				<div class="pull-left">
+					<button class="btn btn-success" onclick="showCreateTaskModal()">
+						创建任务</button>
+					<button id="remove" class="btn btn-success"
+						style="margin-left: 10px" data-target="#delete_task_modal"
+						onclick="checkDeleteTaskTable()">删除任务</button>
+				</div>
+				<div class="pull-right">
+					<input id="search_box" type="text" class="form-control "
+						placeholder="搜索...">
+				</div>
+				<div class="pull-right" style="padding-right: 10px">
+					<select id="test_case_dropdown_list" class="form-control"
+						style="min-width: 150px; max-width: 180px">
+						<option value="-1">全部用例</option>
+					</select>
+				</div>
+			</div>
+		</div>
+</body>
+<script src="/res/js/self/sign.js"></script>
+</html>
