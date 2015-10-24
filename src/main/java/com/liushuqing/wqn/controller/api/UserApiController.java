@@ -33,7 +33,7 @@ public class UserApiController extends BaseController {
     @RequestMapping("/sign")
     public @ResponseBody ApiResult sign(HttpServletRequest request, HttpSession session) {
         System.out.println(request);
-        logger.debug("===login===");
+        logger.debug("\n ===注册===");
         ApiResult mv = new ApiResult();
         return mv;
     }

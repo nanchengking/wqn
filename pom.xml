@@ -171,6 +171,25 @@
 			</exclusions>
 		</dependency>
 		<!--爬虫有关结束 -->
+		<!-- 日志相关开始 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<!-- 日志相关结束 -->
 
 	</dependencies>
 
@@ -202,6 +221,7 @@
 					<path>/</path>
 					<port>8080</port>
 					<uriEncoding>UTF-8</uriEncoding>
+					<contextReloadable>true</contextReloadable>
 				</configuration>
 			</plugin>
 			<!-- 其他插件 结束 -->

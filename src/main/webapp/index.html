@@ -28,14 +28,13 @@
 
 	<div class="col-sm-5  col-sm-offset-4">
 		<h1>欢迎来到首页</h1>
-		<h3>呵呵</h3>
-		<button onclick="alert_something('你点击了测试按钮')" type="button" class="btn">
-			这是一个测试按钮</button>
+		<button onclick="alert_something('你点击了测试按钮')" type="button"
+			class="btn">这是一个测试按钮</button>
 		<br> <a href='login/index' style="color: red">点击跳转到ftl写成的页面</a>
 	</div>
 
 	<div class="col-sm-10  col-sm-offset-2">
-		<form >
+		<form>
 			<div>
 				<button class="btn btn-success">注册</button>
 				<button class="btn btn-success">登录</button>
@@ -45,10 +44,10 @@
 					placeholder="输入用户名">
 			</div>
 			<div class="pull-left">
-				<input id="user_psd" type="text"  class="form-control "
+				<input id="user_psd" type="text" class="form-control "
 					placeholder="输入用户密码">
 			</div>
-			<div class="pull-left">
+			<div >
 				<select id="test_case_dropdown_list" class="form-control"
 					style="min-width: 150px; max-width: 180px">
 					<option value="1">lsq</option>
@@ -58,6 +57,11 @@
 			</div>
 		</form>
 	</div>
+	<div class="col-sm-10  col-sm-offset-2">
+		<button id="spider" class="btn btn-success">运行爬虫</button>
+		<button id="stop_spider" class="btn btn-success">停止爬虫</button>
+	</div>
 </body>
 <script src="/res/js/self/sign.js"></script>
+<script src="/res/js/self/test.js"></script>
 </html>

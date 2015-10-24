@@ -30,8 +30,7 @@ public class UserController extends BaseController {
     @RequestMapping("/index")
     public ModelAndView login(HttpServletRequest request, Model model, HttpSession session) {
         model.addAttribute("test", "this is a test!");
-        System.out.println(request);
-        logger.debug("===login===");
+        logger.warn("\n ===login===");
         ModelAndView mv = new ModelAndView("login");
         return mv;
     }
@@ -39,7 +38,7 @@ public class UserController extends BaseController {
     @RequestMapping("/html")
     public String relogin(HttpServletRequest request, Model model, HttpSession session) {
         model.addAttribute("test", "this is a test!");
-        logger.debug("===relogin===");
+        logger.warn("\n ===relogin===");
         return "reLogin";
     }
     
