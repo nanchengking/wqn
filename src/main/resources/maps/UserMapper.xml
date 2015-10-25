@@ -16,19 +16,9 @@
 	<insert id="insertUser" parameterType="com.liushuqing.wqn.meta.entity.User"
 		useGeneratedKeys="true" keyProperty="id">
 		insert into
-		user(passWord,name,createTime,changeTime,leval,description)
+		user(pass_word,name,created_at,updated_at,leval,description)
 		values(#{passWord},#{name},#{createTime},#{changeTime},#{leval},#{description})
 	</insert>
-
-<!-- 	<insert id="insertUsers" parameterType="java.util.List">
-		insert into
-		user(passWord,name,createTime,changeTime,leval,description)
-		values
-		<foreach item="item" index="index" collection="list" open="("
-			separator="," close=")">
-			#{item.passWord},#{item.name},#{item.createTime},#{item.changeTime},#{item.leval},#{item.description}
-		</foreach>
-	</insert> -->
 
 	<delete id="deleteUser" parameterType="java.lang.Integer">
 		delete from user where
@@ -45,11 +35,9 @@
 
 	<update id="updateUser" parameterType="com.liushuqing.wqn.meta.entity.User">
 		update user set
-		passWord=#{passWord},name=#{name},createTime=#{createTime},changeTime=#{changeTime},leval=#{leval},description=#{description}
+		passWord=#{pass_word},name=#{name},created_at=#{createTime},updated_at=#{changeTime},leval=#{leval},description=#{description}
 		where
 		id=#{id}
 	</update>
-
-
 
 </mapper>
