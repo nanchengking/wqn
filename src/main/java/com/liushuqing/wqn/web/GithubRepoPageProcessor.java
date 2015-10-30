@@ -3,6 +3,8 @@
  */
 package com.liushuqing.wqn.web;
 
+import java.util.List;
+
 /**
  * @author nancheng
  *
@@ -17,14 +19,16 @@ public class GithubRepoPageProcessor implements PageProcessor {
 
     @Override
     public void process(Page page) {
-        page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/\\w+/\\w+)").all());
-        page.putField("author", page.getUrl().regex("https://github\\.com/(\\w+)/.*").toString());
-        page.putField("name", page.getHtml().xpath("//h1[@class='entry-title public']/strong/a/text()").toString());
+        List<String> hrefs = page.getHtml().css("div.fm-movie-title").$("a", "href").all();
+        for (String i : hrefs) {
+            i = "http://dianying.fm/" + i;
+        }
+        page.addTargetRequests(hrefs);
+        page.putField("name", page.getHtml().xpath("//h3/a[@name='title']/text()").toString());
+        page.putField("content", page.getHtml().xpath("//div[@class='fm-summary']/text()").toString());
         if (page.getResultItems().get("name") == null) {
-            // skip this page
             page.setSkip(true);
         }
-        page.putField("readme", page.getHtml().xpath("//div[@id='readme']/tidyText()"));
     }
 
     @Override

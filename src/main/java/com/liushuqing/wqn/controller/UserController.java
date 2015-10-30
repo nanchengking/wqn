@@ -31,7 +31,7 @@ public class UserController extends BaseController {
     public ModelAndView login(HttpServletRequest request, Model model, HttpSession session) {
         model.addAttribute("test", "this is a test!");
         logger.warn("\n ===login===");
-        ModelAndView mv = new ModelAndView("login");
+        ModelAndView mv = new ModelAndView("ftl/login");
         return mv;
     }
     
@@ -39,7 +39,7 @@ public class UserController extends BaseController {
     public String relogin(HttpServletRequest request, Model model, HttpSession session) {
         model.addAttribute("test", "this is a test!");
         logger.warn("\n ===relogin===");
-        return "reLogin";
+        return "html/reLogin";
     }
     
 

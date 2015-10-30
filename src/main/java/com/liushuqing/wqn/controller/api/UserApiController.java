@@ -12,8 +12,9 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.liushuqing.wqn.controller.BaseController;
@@ -33,17 +34,13 @@ public class UserApiController extends BaseController {
     private UserServce userService;
     private static Logger logger = LoggerFactory.getLogger(UserApiController.class);
 
-    @RequestMapping("/sign")
-    public @ResponseBody ApiResult sign(HttpServletRequest request, HttpSession session,
-            @RequestParam(value = "name") String name, @RequestParam(value = "passWord") String passWord,
-            @RequestParam(value = "leval") String leval) {
-        logger.debug("\n name is  :" + name + "passWord is  :" + passWord + "leval is  :" + leval);
-        User user = new User();
-        user.setCreateTime(new Date()).setChangeTime(new Date()).setName(name).setLeval(Integer.parseInt(leval))
-                .setPassWord(passWord);
+    @RequestMapping(value = "/sign", method = RequestMethod.POST)
+    public @ResponseBody ApiResult sign(HttpServletRequest request, HttpSession session, @RequestBody User user) {
+        logger.debug("\n name is  :" + user.getName() + "passWord is  :" + user.getPassWord() + "leval is  :"
+                + user.getLeval());
+        user.setCreateTime(new Date()).setChangeTime(new Date());
         int id = userService.insertUser(user);
         logger.debug("\n 插入的一个id 是：" + id);
-
         ApiResult result = new ApiResult();
         return result;
     }

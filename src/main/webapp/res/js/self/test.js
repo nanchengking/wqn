@@ -3,7 +3,7 @@ function alert_something(a) {
 }
 
 function testChangeToHtml(a) {
-    window.location.replace(a)
+    location.replace(a)
 }
 var i = 0;
 function testJquery() {
@@ -38,6 +38,11 @@ function stopSpider() {
         }
     });
 }
+function change_to_spider() {
+    testChangeToHtml('spider/index');
+}
+
+$("#change_to_spider").bind("click", change_to_spider);
 $("#stop_spider").bind("click", stopSpider);
 $("#t_button").bind("click", testJquery);
 $("#spider").bind("click", crawlSpider);

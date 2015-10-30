@@ -17,6 +17,9 @@
 	<context:component-scan base-package="com.liushuqing.wqn" />
 	<context:annotation-config />
 
+	<!-- 这儿映射首页 -->
+	 <mvc:view-controller path="/" view-name="/index" />
+
 	<!-- 国际化的一些东西 -->
 	<bean id="localeResolver"
 		class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
@@ -33,7 +36,7 @@
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<!-- 配置模板加载路径 -->
 		<property name="templateLoaderPath">
-			<value>/template/ftl/</value>
+			<value>/template/</value>
 		</property>
 		<property name="freemarkerSettings">
 			<props>
@@ -90,7 +93,7 @@
 				</bean>
 				<bean
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-					<property name="prefix" value="/template/html/" />
+					<property name="prefix" value="/template/" />
 					<property name="suffix" value=".html"></property>
 					<property name="order" value="20"></property>
 				</bean>
