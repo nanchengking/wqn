@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liushuqing.wqn.meta.dao.SearchResultDao">
+
+	<insert id="insertSearchResult" parameterType="com.liushuqing.wqn.meta.entity.User"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into
+		search_result(search_task_id,type,created_at,finish_at,name,content,url,download_link)
+		values(#{searchTaskId},#{type},#{createdTime},#{finishTime},#{name},#{content},#{url},#{downloadLink})
+	</insert>
+
+	<delete id="deleteSearchResultById" parameterType="java.lang.Integer">
+		delete from
+		search_result where
+		id=#{prama1}
+	</delete>
+
+	<delete id="deleteSearchResultByIds" parameterType="java.util.List">
+		delete from search_result where id in
+		<foreach item="item" index="index" collection="list" open="("
+			separator="," close=")">
+			#{prama1}
+		</foreach>
+	</delete>
+
+	<update id="updateSearchResult" parameterType="com.liushuqing.wqn.meta.entity.SearchResult">
+		update
+		search_result set
+		search_task_id=#{searchTaskId},name=#{name},
+		created_at=#{createdTime},finish_at=#{finishTime},
+		type=#{type},content=#{content},url=#{url}
+		,downloadLink=#{downloadLink}
+		where
+		id=#{id}
+	</update>
+
+</mapper>

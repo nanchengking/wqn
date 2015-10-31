@@ -8,15 +8,17 @@ public class BaseEntity {
         return id;
     }
 
-    public void setId(int id) {
+    public BaseEntity setId(int id) {
         this.id = id;
+        return this;
     }
 
     public int getVersion() {
         return version;
     }
 
-    public void setVersion(int version) {
+    public BaseEntity setVersion(int version) {
         this.version = version;
+        return this;
     }
 }

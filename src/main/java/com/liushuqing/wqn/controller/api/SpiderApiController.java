@@ -37,7 +37,7 @@ public class SpiderApiController extends BaseController {
     private static Logger logger = LoggerFactory.getLogger(SpiderApiController.class);
 
     private Spider spider = Spider.create(new GithubRepoPageProcessor())
-            .addPipeline(new JsonFilePipeline("target/spider/log")).thread(5);
+            .addPipeline(new JsonFilePipeline("target/spider")).thread(5);
 
     @RequestMapping(value = "/crawl")
     public @ResponseBody ApiResult crawl(HttpServletRequest request, @RequestParam(value = "keyword") String keyword,
@@ -45,7 +45,7 @@ public class SpiderApiController extends BaseController {
         logger.debug("\n type is : "+type);
         spider.addUrl(sb.append(keyword).toString());
         logger.warn("\n  发出爬取请求");
-        spider.run();
+        spider.start();
         logger.warn("\n  爬虫异步开始");
         ApiResult result = new ApiResult();
         result.setCode(200).setMsg("OK");
