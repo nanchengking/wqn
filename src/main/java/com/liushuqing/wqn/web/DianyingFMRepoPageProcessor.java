@@ -5,6 +5,9 @@ package com.liushuqing.wqn.web;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @author nancheng
  *
@@ -13,10 +16,11 @@ import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
 
-public class GithubRepoPageProcessor implements PageProcessor {
+@Component
+public class DianyingFMRepoPageProcessor implements PageProcessor {
 
     private Site site = Site.me().setRetryTimes(3).setSleepTime(100);
-
+    
     @Override
     public void process(Page page) {
         List<String> hrefs = page.getHtml().css("div.fm-movie-title").$("a", "href").all();

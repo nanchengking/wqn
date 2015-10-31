@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liushuqing.wqn.meta.dao.SearchResultDao">
 
-	<insert id="insertSearchResult" parameterType="com.liushuqing.wqn.meta.entity.User"
+	<insert id="insertSearchResult" parameterType="com.liushuqing.wqn.meta.dao.SearchResultDao"
 		useGeneratedKeys="true" keyProperty="id">
 		insert into
 		search_result(search_task_id,type,created_at,finish_at,name,content,url,download_link)
