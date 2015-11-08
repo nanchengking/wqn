@@ -7,7 +7,7 @@
 	    color: #333;
 	}
       body {
-		background-image:url(/res/img/1.png);
+		background-image:url(/res/img/spider.png);
         background-color: #f2f8f8;
 		background-position:right 300px;
 		background-repeat:no-repeat;
