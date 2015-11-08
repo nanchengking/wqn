@@ -15,3 +15,8 @@ test-output
 *.iml
 *~
 /build/
+/src/main/webapp/res/js/plugin/
+*/src/main/webapp/res/js/plugin/*
+*bootstrap*
+/src/main/webapp/res/fonts/
+*/src/main/webapp/res/fonts/*
